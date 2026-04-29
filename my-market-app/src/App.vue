@@ -7,53 +7,41 @@
     <!-- NAVBAR -->
     <header class="nav-glass">
       
-
           <input 
-  v-if="page==='home' || page==='shop'"
-  v-model="search" 
-  placeholder="Search" 
-  class="search"
-/>
+                 v-if="page==='home' || page==='shop'"
+                 v-model="search" 
+                 placeholder="Search" 
+                 class="search"/>
 
        <div class="nav-actions">
-       <button class="btn"  @click="page='home'">Home </button>
+        <button class="btn"  @click="page='home'">Home </button>
         <button class="btn" @click="page='shop'">Shop</button>
         <button class="btn" @click="page='login'">Login</button>
         <button class="btn" @click="page='signup'">Sign Up</button>
-
-        <button @click="isDark = !isDark">
-          {{ isDark ? "☀️" : "🌙" }}
-        </button>
-
+        <button @click="isDark = !isDark"> {{ isDark ? "☀️" : "🌙" }} </button>
         <button class="btn btn-primary" @click="showCart = true">🛒 {{ cart.length }}</button>
       </div>
     </header>
 
- <!-- 🔥 PROFESSIONAL HERO -->
+ <!-- 🔥 Home-->
 <section v-if="page==='home'" class="hero-pro">
-
-  
-
-  <div class="hero-overlay">
-    <h1>Snappick Market</h1>
-    <p>Find the best deals on trending products</p>
-
-    <button class="btn btn-primary small-btn" @click="page='shop'">Shop Now</button>
-  </div>
-
-
+    
+    <div class="hero-overlay">
+      <h1>Snappick Market</h1>
+      <p>Find the best deals on trending products</p>
+      <button class="btn btn-primary small-btn" @click="page='shop'">Shop Now</button>
+    </div>
 </section>
-<div v-if="page=='home'">
-<div class="home-section">
-  <h2 class="section-title">✨ Why Choose Us</h2>
-
-  <div class="features">
+    <div v-if="page=='home'">
+    <div class="home-section">
+       <h2 class="section-title">✨ Why Choose Us</h2>
+    <div class="features">
     <div class="feature-card">🚚 Fast Delivery</div>
     <div class="feature-card">💳 Secure Payments</div>
     <div class="feature-card">⭐ Top Quality</div>
     <div class="feature-card">🔄 Easy Returns</div>
-  </div>
-</div>
+    </div>
+    </div>
 
 <div class="promo-banner">
   <h2>🔥 Mega Sale</h2>
@@ -337,7 +325,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+  background: linear-gradient(135deg, #4d086841,  #4d086841,  #4d086841);
   z-index: -1;
 }
 
@@ -364,7 +352,7 @@ html, body {
 }
 .app {
   width: 100%;
-  max-height: 100;
+  min-height: 100vh;
 }
 
 .search {
@@ -448,9 +436,7 @@ button {
 }
 
 /* background */
-.dark .bg-gradient {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-}
+
 
 /* navbar */
 .dark .nav-glass {
@@ -841,7 +827,7 @@ button {
   margin: 20px auto;
   border-radius: 20px;
   overflow: hidden;
-  max-width:1200px;
+  max-width:100%;
 }
 
 /* background image */
@@ -859,7 +845,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(82, 75, 75, 0.89);
   
 
   display: flex;
@@ -920,8 +906,8 @@ button {
 .hero-overlay {
   background: linear-gradient(
     to right,
-    rgba(0,0,0,0.7),
-    rgba(0,0,0,0.2)
+    rgba(179, 81, 81, 0.7),
+    rgba(136, 138, 253, 0.2)
   );
 }
 
